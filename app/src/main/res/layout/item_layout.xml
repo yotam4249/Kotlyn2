@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Image for the item -->
+    <ImageView
+        android:id="@+id/studentImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Item Image"/>
+
+    <!-- Name of the item -->
+    <TextView
+        android:id="@+id/studentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/studentImage"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/item_checkbox"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"/>
+
+    <!-- ID of the item -->
+    <TextView
+        android:id="@+id/studentId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/studentName"
+        app:layout_constraintStart_toEndOf="@id/studentImage"
+        app:layout_constraintLeft_toRightOf="@id/item_checkbox"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"/>
+
+    <!-- Checkbox to select the item -->
+    <CheckBox
+        android:id="@+id/item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingVertical="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
